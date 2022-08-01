@@ -1,23 +1,14 @@
-const testResults1 = [10, 10, 11, 9, 12, 8];
-const testResults2 = [5];
-function getSpeedStatistic(testResults) {
-  const min = Math.min(...testResults);
-  const max = Math.max(...testResults);
-  // const sum = testResults.reduce((prev, num) => {
-  //   return prev + num;
-  // }, 0);
-
-  let sum = 0;
-  for (let i = 0; i < testResults.length; i += 1) {
-    sum += testResults[i];
+function smash(words) {
+  'use strict';
+  var smashed = '';
+  for (var i = 0; i < words.length; i++) {
+    console.log(words[i]);
+    smashed += words[i];
+    if (i != words.length - 1) {
+      smashed += ' ';
+    }
   }
-  // for (const result of testResults) {
-  //   sum += result;
-  // }
-
-  const mid = Math.floor(sum / testResults.length);
-  return [min, max, mid];
+  return smashed;
 }
 
-console.log(getSpeedStatistic(testResults1));
-console.log(getSpeedStatistic(testResults2));
+console.log(smash(['hello', 'world']));
