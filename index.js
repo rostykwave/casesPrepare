@@ -1,20 +1,23 @@
-const makeCounter = function () {
-  let currCount = 0;
+const testResults1 = [10, 10, 11, 9, 12, 8];
+const testResults2 = [5];
+function getSpeedStatistic(testResults) {
+  const min = Math.min(...testResults);
+  const max = Math.max(...testResults);
+  // const sum = testResults.reduce((prev, num) => {
+  //   return prev + num;
+  // }, 0);
 
-  const increaseCount = () => {
-    currCount += 1;
-  };
+  let sum = 0;
+  for (let i = 0; i < testResults.length; i += 1) {
+    sum += testResults[i];
+  }
+  // for (const result of testResults) {
+  //   sum += result;
+  // }
 
-  const getCurrCount = () => {
-    return currCount;
-  };
+  const mid = Math.floor(sum / testResults.length);
+  return [min, max, mid];
+}
 
-  return { increaseCount, getCurrCount };
-};
-
-const counter1 = makeCounter();
-const counter2 = makeCounter();
-counter1.increaseCount();
-counter1.increaseCount();
-console.log(counter1.getCurrCount());
-console.log(counter2.getCurrCount());
+console.log(getSpeedStatistic(testResults1));
+console.log(getSpeedStatistic(testResults2));
