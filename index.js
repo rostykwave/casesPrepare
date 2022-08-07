@@ -1,6 +1,20 @@
-function removeDupes(str) {
-  return Array.from(new Set(str)).join('');
-}
+const reverseSeq = n => {
+  let a = [];
+  for (let i = n; i > 0; i -= 1) {
+    a.push(i);
+  }
 
-console.log(removeDupes('abcd'));
-console.log(removeDupes('abcdabcd56865'));
+  return a;
+};
+
+// const reverseSeq = n => {
+//   let a = [];
+//   for (let i = 1; i <= n; i += 1) {
+//     a.unshift(i);
+//   }
+
+//   return a;
+// };
+
+console.log(reverseSeq(6));
+// console.log(reverseSeq(2));
