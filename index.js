@@ -1,20 +1,17 @@
-const reverseSeq = n => {
-  let a = [];
-  for (let i = n; i > 0; i -= 1) {
-    a.push(i);
-  }
-
-  return a;
+var number = function (array) {
+  //your awesome code here
+  return array.map((item, index) => {
+    return index + 1 + ': ' + item;
+  });
 };
+// var number = function (array) {
+//   //your awesome code here
+//   let newArray = [];
 
-// const reverseSeq = n => {
-//   let a = [];
-//   for (let i = 1; i <= n; i += 1) {
-//     a.unshift(i);
+//   for (let i = 0; i < array.length; i++) {
+//     newArray.push(i + 1 + ': ' + array[i]);
 //   }
-
-//   return a;
+//   return newArray;
 // };
 
-console.log(reverseSeq(6));
-// console.log(reverseSeq(2));
+console.log(number(['a', 'b', 'c']));
