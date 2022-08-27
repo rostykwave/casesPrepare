@@ -1,17 +1,22 @@
-var number = function (array) {
-  //your awesome code here
-  return array.map((item, index) => {
-    return index + 1 + ': ' + item;
-  });
-};
-// var number = function (array) {
-//   //your awesome code here
-//   let newArray = [];
+// function SeriesSum(n) {
+//   // Happy Coding ^_^
+//   let result = 0;
+//   let denominator = 1;
 
-//   for (let i = 0; i < array.length; i++) {
-//     newArray.push(i + 1 + ': ' + array[i]);
+//   for (let i = 1; i <= n; i += 1) {
+//     result += 1 / denominator;
+//     denominator += 3;
 //   }
-//   return newArray;
-// };
+//   return result.toFixed(2);
+// }
+function SeriesSum(n) {
+  for (var s = 0, i = 0; i < n; i++) {
+    s += 1 / (1 + i * 3);
+  }
 
-console.log(number(['a', 'b', 'c']));
+  return s.toFixed(2);
+}
+
+console.log(SeriesSum(1));
+console.log(SeriesSum(2));
+console.log(SeriesSum(5));
