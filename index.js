@@ -1,20 +1,19 @@
-const reverseSeq = n => {
-  let a = [];
-  for (let i = n; i > 0; i -= 1) {
-    a.push(i);
-  }
+// function solution(str) {
+//   return str
+//     .split('')
+//     .reduce((reverseArray, letter) => {
+//       reverseArray.unshift(letter);
+//       return reverseArray;
+//     }, [])
+//     .join('');
+// }
+function solution(str) {
+  return str.split('').reverse().join('');
+}
 
-  return a;
-};
-
-// const reverseSeq = n => {
-//   let a = [];
-//   for (let i = 1; i <= n; i += 1) {
-//     a.unshift(i);
-//   }
-
-//   return a;
-// };
-
-console.log(reverseSeq(6));
-// console.log(reverseSeq(2));
+// function solution(str) {
+//   var o = '';
+//   for (var i = str.length - 1; i >= 0; i--) o += str[i];
+//   return o;
+// }
+console.log("solution('world')", solution('world'));
