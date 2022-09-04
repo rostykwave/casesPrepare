@@ -1,8 +1,19 @@
-function squareSum(numbers) {
-  return numbers.reduce((sum, num) => {
-    return sum + num * num;
-  }, 0);
+// function squareDigits(num) {
+//   return +num
+//     .toString()
+//     .split('')
+//     .map(i => i * i)
+//     .join('');
+// }
+
+function squareDigits(num) {
+  return (
+    num
+      .toString()
+      .split('')
+      .map(n => n * n)
+      .join('') * 1
+  );
 }
 
-console.log(squareSum([1, 2])); //5
-console.log(squareSum([])); //0
+console.log(squareDigits(3212)); //9414
