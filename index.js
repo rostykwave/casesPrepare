@@ -1,19 +1,13 @@
-// function squareDigits(num) {
-//   return +num
-//     .toString()
-//     .split('')
-//     .map(i => i * i)
-//     .join('');
-// }
+var a = {
+  a: 1,
+  getContext: function () {
+    console.log('this from a', this);
+  },
+};
+var b = {
+  a: 2,
+  getContext: console.log('this from b', this),
+};
 
-function squareDigits(num) {
-  return (
-    num
-      .toString()
-      .split('')
-      .map(n => n * n)
-      .join('') * 1
-  );
-}
-
-console.log(squareDigits(3212)); //9414
+a.getContext();
+b.getContext;
