@@ -6,7 +6,7 @@
 //     .join('');
 // }
 
-function squareDigitsNewNEW(num) {
+function squareDigits(num) {
   return (
     num
       .toString()
@@ -16,4 +16,4 @@ function squareDigitsNewNEW(num) {
   );
 }
 
-console.log(squareDigitsNewNEW(3212)); //9414
+console.log(squareDigits(3212)); //9414
