@@ -1,19 +1,5 @@
-// function squareDigits(num) {
-//   return +num
-//     .toString()
-//     .split('')
-//     .map(i => i * i)
-//     .join('');
-// }
+const stringToNumber = function (str) {
+  return parseInt(str);
+};
 
-function squareDigits(num) {
-  return (
-    num
-      .toString()
-      .split('')
-      .map(n => n * n)
-      .join('') * 1
-  );
-}
-
-console.log(squareDigits(3212)); //9414
+console.log(stringToNumber('3212'));
